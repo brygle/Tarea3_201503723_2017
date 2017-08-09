@@ -21,11 +21,12 @@ public class Palindromas {
         System.out.println("Ingrese una palabra palindroma");
         palabra = entrada.nextLine();
         boolean comprobar = verificarPalindromas(palabra);
+        System.out.println("");
         if(comprobar==true){
-            System.out.println("LA PALABRA ES PALINDROMA");
+            System.out.println("!SI ES PALINDROMA!!!!!");
             System.out.println("");
         }else{
-            System.out.println("LA PALABRA NO ES PALINDROMA");
+            System.out.println("!NO ES PALINDROMA!!!!!");
             System.out.println("");
         }
         
