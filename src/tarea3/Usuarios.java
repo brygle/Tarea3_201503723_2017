@@ -35,7 +35,9 @@ public class Usuarios {
             case 2:
                 mostrarusuarios();
                 break;
-            case 3:break;
+            case 3:
+                usuariopersonalizado();
+                break;
             case 4: menu.MenuPrincipal();
                     break;
             case 5:exit(0);
@@ -70,6 +72,40 @@ public class Usuarios {
         }
         System.out.println("");
         MenuUsuarios();
+    }
+    
+    public void usuariopersonalizado(){
+        System.out.println("Mostrar usuario personalido");
+        System.out.println("");
+        System.out.println("    Ingresar usuario");
+        String nombre = entrada.next();
+        System.out.println("");
+        
+        boolean validar=false;
+        int i=0;
+        while(validar==false){
+            if(i==5){
+            break;}
+            if(nombre.equals(nombres[i])){
+                validar=true;
+            }else{
+                validar=false;
+            }
+            i++;
+            
+        }
+        
+        if(validar==true){
+            System.out.println("Usuario");
+            System.out.println("");
+            System.out.println(nombre);
+        }else{
+            System.out.println("Usuario");
+            System.out.println("");
+            System.out.println("ERROR!! No existe ningun usuario con esa coincidencia");
+        }
+        MenuUsuarios();
+        
     }
     
 }
