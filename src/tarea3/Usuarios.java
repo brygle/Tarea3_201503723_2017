@@ -15,6 +15,7 @@ import java.util.Scanner;
 public class Usuarios {
     Scanner entrada = new Scanner(System.in);
     MenuPrincipal menu = new MenuPrincipal();
+    String[] nombres = new String[5]; 
     
     public void MenuUsuarios(){
         System.out.println("    Menú de Usuarios");
@@ -28,8 +29,12 @@ public class Usuarios {
         opcion = entrada.nextInt();
         
         switch(opcion){
-            case 1:break;
-            case 2:break;
+            case 1:
+                ingresarusuarios();
+                break;
+            case 2:
+                mostrarusuarios();
+                break;
             case 3:break;
             case 4: menu.MenuPrincipal();
                     break;
@@ -39,6 +44,32 @@ public class Usuarios {
     
     }
     
+    }
+    
+    public void ingresarusuarios(){
+        int i, j;
+        System.out.println("");
+        for(i=0;i<5;i++){
+            j=i+1;
+            System.out.println("Ingrese el nombre del usuario No. "+ (j));
+            String nombre;
+            nombre = entrada.next();
+            nombres[i] = nombre;
+            System.out.println("");
+            
+        }
+    MenuUsuarios();
+    }
+    public void mostrarusuarios(){
+        int i,j;
+        System.out.println("Mostrar todos los usuarios");
+        System.out.println("");
+        for(i=0;i<5;i++){
+            j = i+1;
+            System.out.println(j +". "+ nombres[i]);
+        }
+        System.out.println("");
+        MenuUsuarios();
     }
     
 }
